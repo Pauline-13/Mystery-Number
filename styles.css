@@ -6,7 +6,9 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #1b191a;
 }
 
@@ -23,7 +25,7 @@ article {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   border-radius: 20px 5px;
   width: 40%;
-  height: 550px;
+  height: 600px;
   margin-top: 5%;
 }
 
@@ -69,6 +71,18 @@ span {
   box-shadow: 0px 0px 10px;
 }
 
+#regle {
+  font-family: "Turret Road", sans-serif;
+  font-weight: 500;
+  font-size: 150%;
+  color: #f8f3e6;
+  margin-top: 5%;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-shadow: 2px 2px 10px black;
+}
+
 input {
   font-family: "Turret Road", sans-serif;
   font-weight: 500;
@@ -77,7 +91,7 @@ input {
   text-align: center;
   width: 50%;
   height: 150px;
-  margin-top: 10%;
+  margin-top: 5%;
   background-color: #2c2627;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
   border: 2px solid rgb(141, 116, 71);
@@ -121,16 +135,33 @@ button:active {
   color: rgb(168, 116, 18);
 }
 
-p {
+#resultats {
   font-family: "Turret Road", sans-serif;
   font-weight: 500;
   font-size: 120%;
-  color: #f8f3e6;
-  margin-top: 8%;
+  color: rgb(141, 116, 71);
+  margin-top: 12%;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid black;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+#footer {
+  font-family: "Turret Road", sans-serif;
+  font-size: 100%;
+  color: black;
 }
 
 /* --------------------------------- Responsive --------------------------------- */
@@ -138,8 +169,8 @@ p {
 @media screen and (max-width: 480px) {
   article {
     width: 90%;
-    height: 550px;
-    margin-top: 15%;
+    height: 600px;
+    margin-top: 10%;
   }
 
   h1 {
@@ -148,13 +179,32 @@ p {
     padding-left: 5px;
   }
 
+  #regle {
+    font-size: 120%;
+    margin-top: 5%;
+  }
+
   input {
     width: 60%;
+    margin-top: 10%;
   }
 
   button {
     font-size: 140%;
+    padding: 0px;
+    margin-top: 5%;
   }
 
-  p {margin-top: 12%;}
+  #resultats {
+    margin-top: 12%;
+  }
+
+  footer {
+    height: 80px;
+    margin-top: 50px;
+  }
+
+  #footer {
+    font-size: 80%;
+  }
 }

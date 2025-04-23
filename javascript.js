@@ -11,7 +11,7 @@ function maFonction() {
 
   // Vérifie si l'entrée est valide (un nombre entre 1 et 10)
   if (input < 1 || input > 10 || input === "") {
-    result = "Veuillez entrer un nombre entre 1 et 10.";
+    result = "Entre un nombre entre 1 et 10.";
   } else {
     // Si l'entrée est valide, on vérifie si le nombre est correct
     if (input < mysteryNumber) {
@@ -19,14 +19,14 @@ function maFonction() {
     } else if (input > mysteryNumber) {
       result = "C'est moins !";
     } else if (input == mysteryNumber) {
-      result = "Bravo ! Vous avez trouvé le nombre mystère !";
+      result = "Bravo ! Tu as trouvé le nombre mystère !";
       gameOver = true; // Le jeu est terminé
     }
 
     essaisRestants--; // On décrémente le nombre d'essais
     if (essaisRestants <= 0 && input != mysteryNumber) {
       result =
-        "Dommage, vous avez perdu. Le nombre mystère était " + mysteryNumber;
+        "Dommage, tu as perdu. Le nombre mystère était " + mysteryNumber;
       gameOver = true; // Le jeu est terminé
     }
   }
@@ -38,7 +38,7 @@ function maFonction() {
   // Affiche le nombre d'essais restants
   if (!gameOver) {
     document.getElementById("resultats").textContent +=
-      " Il vous reste " + essaisRestants + " essai(s).";
+      " Il te reste " + essaisRestants + " essai(s).";
   }
 
   // Si le jeu est terminé, désactive le bouton
