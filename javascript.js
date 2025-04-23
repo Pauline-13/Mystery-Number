@@ -21,13 +21,23 @@ function maFonction() {
     } else if (input == mysteryNumber) {
       result = "Bravo ! Tu as trouvé le nombre mystère !";
       gameOver = true; // Le jeu est terminé
+      let resultatElement = document.getElementById("resultats");
+      resultatElement.classList.remove("animation-victoire"); // on la retire d’abord
+
+      // Force un "reflow" pour que le navigateur prenne en compte le retrait
+      void resultatElement.offsetWidth;
+
+      resultatElement.classList.add("animation-victoire"); // on la rajoute juste après
     }
 
     essaisRestants--; // On décrémente le nombre d'essais
     if (essaisRestants <= 0 && input != mysteryNumber) {
-      result =
-        "Dommage, tu as perdu. Le nombre mystère était " + mysteryNumber;
+      result = "Dommage, tu as perdu. Le nombre mystère était " + mysteryNumber;
       gameOver = true; // Le jeu est terminé
+      let resultatElement = document.getElementById("resultats");
+resultatElement.classList.remove("animation-defaite");
+void resultatElement.offsetWidth;
+resultatElement.classList.add("animation-defaite");
     }
   }
 
@@ -43,13 +53,29 @@ function maFonction() {
 
   // Si le jeu est terminé, désactive le bouton
   if (gameOver) {
-    document.getElementById("my-button").disabled = true;
+    document.getElementById("my-button").style.display = "none";
+    document.getElementById("rejouer-button").style.display = "inline"; // Affiche le bouton Rejouer
   }
 }
 
+function relancerJeu() {
+  mysteryNumber = Math.floor(Math.random() * 10) + 1;
+  essaisRestants = 3;
+  gameOver = false;
+
+  document.getElementById("my-button").style.display = "inline";
+  document.getElementById("rejouer-button").style.display = "none";
+  document.getElementById("resultats").textContent = "";
+  document.getElementById("my-input").value = "";
+  document.getElementById("resultats").classList.remove("animation-defaite");
+}
+
 // Ajouter un écouteur d'événements pour la touche "Enter" (Entrée)
-document.getElementById("my-input").addEventListener("keydown", function(event) {
-  if (event.key === "Enter") { // Si la touche pressée est "Enter"
-    maFonction(); // Appeler la fonction du jeu comme si on avait cliqué sur le bouton
-  }
-});
+document
+  .getElementById("my-input")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      // Si la touche pressée est "Enter"
+      maFonction(); // Appeler la fonction du jeu comme si on avait cliqué sur le bouton
+    }
+  });

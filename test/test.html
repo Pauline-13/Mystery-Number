@@ -3,18 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Nombre Mystère</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Rubik+Microbe&family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+    <title>Nombre mystère</title>
   </head>
   <body>
-    <input type="number" id="my-input" required />
+    <article>
+      <h1>Nombre <span>MYSTÈRE</span></h1>
+      <div id="barre"></div>
 
-    <button id="my-button" onclick="maFonction()">Cliquez ici</button>
+      <p id="regle"> Choisis ta difficulté 
+      </p>
 
-    <div>
-      <p id="resultats"></p>
-    </div>
+      <div id="choix-niveau">
+        <button class="niveau-btn" onclick="changerNiveau('facile')">Facile </button>
+        <button class="niveau-btn" onclick="changerNiveau('moyen')">Moyen </button>
+        <button class="niveau-btn" onclick="changerNiveau('difficile')">Difficile </button>
+        <button class="niveau-btn" onclick="changerNiveau('expert')">Cocu </button>
+      </div>
+      <input type="number" id="my-input" required />
 
-    <!-- Permet de lier le JS au HTML -->
+      <button id="my-button" onclick="maFonction()">VALIDER</button>
+      <button id="rejouer-button" onclick="relancerJeu()" style="display: none;">REJOUER</button>
+
+      <div>
+        <p id="resultats"></p>
+      </div>
+    </article>
+
+    <footer>
+      <p id="footer">© Designé par Pauline Tincq - Projet de formation</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
