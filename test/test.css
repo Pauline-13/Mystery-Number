@@ -26,7 +26,7 @@ article {
   border-radius: 20px 5px;
   width: 40%;
   height: 650px;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 h1 {
@@ -113,6 +113,22 @@ span {
   box-shadow: rgb(195, 137, 29) 0px -50px 36px -28px inset;
 }
 
+.niveau-btn:disabled {
+  pointer-events: none;
+}
+
+.niveau-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.niveau-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+  background-color:  rgb(168, 116, 18);
+  color: rgb(17, 16, 16);
+}
+
 input {
   font-family: "Turret Road", sans-serif;
   font-weight: 500;
@@ -149,6 +165,22 @@ input {
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
+#my-button:disabled {
+  pointer-events: none;
+}
+
+#my-button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#my-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+  background-color: rgb(17, 16, 16);
+  color: rgb(168, 116, 18);
+}
+
 #rejouer-button {
   font-family: "Turret Road", sans-serif;
   font-weight: 500;
@@ -170,20 +202,20 @@ input {
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
-button:disabled {
+#rejouer-button:disabled {
   pointer-events: none;
 }
 
-button:hover {
+#rejouer-button:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-button:active {
+#rejouer-button:active {
   box-shadow: none;
   transform: translateY(0);
-  background-color: rgb(17, 16, 16);
-  color: rgb(168, 116, 18);
+  background-color:  rgb(168, 116, 18);
+  color: rgb(17, 16, 16);
 }
 
 #resultats {
@@ -206,7 +238,7 @@ footer {
   width: 100%;
   border-top: 1px solid black;
   border-radius: 10px;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 #footer {
@@ -281,6 +313,11 @@ footer {
     margin-top: 5%;
   }
 
+  #choix-niveau {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   input {
     width: 60%;
     margin-top: 10%;
@@ -294,6 +331,7 @@ footer {
 
   #resultats {
     margin-top: 12%;
+    margin-bottom: 10%;
   }
 
   footer {

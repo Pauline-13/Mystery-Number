@@ -14,7 +14,7 @@ function maFonction() {
 
   // Vérifie si l'entrée est valide (un nombre entre 1 et 10)
   if (input < 1 || input > maxNombre || input === "") {
-    result = "Entre un nombre entre 1 et 10.";
+    result = "Entre un nombre avant de valider.";
   } else {
     // Si l'entrée est valide, on vérifie si le nombre est correct
     if (input < mysteryNumber) {
