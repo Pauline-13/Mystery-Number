@@ -309,18 +309,97 @@ footer {
   }
 
   #regle {
-    font-size: 120%;
+    font-size: 140%;
     margin-top: 5%;
   }
 
   #choix-niveau {
-    padding-left: 0px;
-    padding-right: 0px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .niveau-btn {
+    font-size: 100%;
   }
 
   input {
     width: 60%;
     margin-top: 10%;
+    font-size: 120%;
+    height: 120px;
+  }
+
+  #my-button {
+    font-size: 140%;
+  }
+
+  #rejouer-button {
+    font-size: 140%;
+  }
+
+  button {
+    font-size: 140%;
+    padding: 0px;
+    margin-top: 5%;
+  }
+
+  #resultats {
+    margin-top: 12%;
+    margin-bottom: 10%;
+  }
+
+  footer {
+    height: 80px;
+    margin-top: 50px;
+  }
+
+  #footer {
+    font-size: 80%;
+  }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  article {
+    width: 90%;
+    height: 600px;
+    margin-top: 10%;
+  }
+
+  h1 {
+    font-size: 300%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  #regle {
+    font-size: 160%;
+    margin-top: 5%;
+  }
+
+  #choix-niveau {
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .niveau-btn {
+    font-size: 100%;
+  }
+
+  input {
+    width: 60%;
+    margin-top: 5%;
+    font-size: 150%;
+    height: 120px;
+  }
+
+  #my-button {
+    font-size: 140%;
+    margin-top: 2%;
+  }
+
+  #rejouer-button {
+    font-size: 140%;
   }
 
   button {
