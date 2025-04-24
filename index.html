@@ -17,11 +17,16 @@
       <h1>Nombre <span>MYSTÈRE</span></h1>
       <div id="barre"></div>
 
-      <p id="regle">
-        Devine le nombre caché entre 1 et 10 <br />Tu as trois chances !
+      <p id="regle"> Choisis ta difficulté 
       </p>
 
-      <input type="number" id="my-input" required />
+      <div id="choix-niveau">
+        <button class="niveau-btn" onclick="changerNiveau('facile')">1 </button>
+        <button class="niveau-btn" onclick="changerNiveau('moyen')">2 </button>
+        <button class="niveau-btn" onclick="changerNiveau('difficile')">3 </button>
+        <button class="niveau-btn" onclick="changerNiveau('expert')">4 </button>
+      </div>
+      <input type="number" placeholder="Saisi ton numéro" id="my-input" required />
 
       <button id="my-button" onclick="maFonction()">VALIDER</button>
       <button id="rejouer-button" onclick="relancerJeu()" style="display: none;">REJOUER</button>
